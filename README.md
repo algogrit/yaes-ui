@@ -1,4 +1,7 @@
 Yaes-ui
 -------
 
-This repo contains the UI for [Yet Another Expense Splitter][https://github.com/gauravagarwalr/Yet-Another-Expense-Splitter].
+The UI for [Yet Another Expense Splitter][1].
+
+
+[1]: https://github.com/gauravagarwalr/Yet-Another-Expense-Splitter
