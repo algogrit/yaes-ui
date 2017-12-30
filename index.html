@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Yet another expense Splitter</title>
+  <script type="text/javascript" src="build/app.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+</body>
+
+<script type="text/javascript">
+var storedState = localStorage.getItem('yet-another-expense-splitter-state');
+var startingState = storedState ? JSON.parse(storedState) : null;
+var elmApp = Elm.App.fullscreen(startingState);
+elmApp.ports.setStorage.subscribe(function(state) {
+    localStorage.setItem('yet-another-expense-splitter-state', JSON.stringify(state));
+});
+</script>
+
+</html>
