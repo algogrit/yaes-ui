@@ -3,14 +3,20 @@ Yaes-ui
 
 The UI for [Yet Another Expense Splitter][1].
 
-## Dev
+### Dev
 
-  Run locally:
+#### Setup
 
-    make dev-run
+    $ npm install
 
-  Build:
+#### Run locally:
 
-    make build
+    $ npm run watch
+
+  and open `index.html` in a browser.
+
+#### Build:
+
+    $ npm run build
 
 [1]: https://github.com/gauravagarwalr/Yet-Another-Expense-Splitter

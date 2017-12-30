@@ -1,0 +1,32 @@
+{
+  "name": "yaes-ui",
+  "version": "1.0.0",
+  "description": "Contains UI for Yet another Expense Splitter. Uses Elm. Node only for dev dependencies.",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "chokidar-cli": "^1.2.0",
+    "elm": "^0.18.0",
+    "node-sass": "^4.7.2"
+  },
+  "scripts": {
+    "elm-compile": "elm-make src/App.elm --output build/app.js",
+    "elm-watch": "chokidar 'src/**/*.elm' -c 'npm run elm-compile' --initial",
+    "scss-compile": "node-sass -r src/assets/stylesheets -o build/",
+    "scss-watch": "chokidar 'src/**/*.scss' -c 'npm run scss-compile' --initial",
+    "build": "npm run scss-compile && npm run elm-compile",
+    "watch": "chokidar 'src/**/*.elm' 'src/**/*.scss' -c 'npm run build' --initial",
+    "reactor": "elm-reactor",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gauravagarwalr/yaes-ui.git"
+  },
+  "author": "Gaurav Agarwal",
+  "license": "BSD-3-Clause ",
+  "bugs": {
+    "url": "https://github.com/gauravagarwalr/yaes-ui/issues"
+  },
+  "homepage": "https://github.com/gauravagarwalr/yaes-ui#readme"
+}
