@@ -17,7 +17,7 @@
     "scss-watcher": "node-sass -rw src/assets/stylesheets -o build/",
 
     "build": "npm run scss-compile && npm run elm-compile",
-    "watch": "chokidar 'src/**/*.elm' 'src/**/*.scss' -c 'npm run build' --initial",
+    "watch": "concurrently \"npm run elm-watcher\" \"npm run scss-watcher\"",
 
     "reactor": "elm-reactor",
 
