@@ -23,8 +23,8 @@ update msg model =
       model ! []
     Login loginMsg ->
       let
-        ( newLogin, loginCmd ) =
+        ( newLogin, cmd ) =
           LoginState.update loginMsg model.login
 
       in
-        ({ model | login = newLogin }, loginCmd)
+        ({ model | login = newLogin }, Cmd.map Login cmd )
