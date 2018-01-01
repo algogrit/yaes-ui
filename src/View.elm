@@ -16,13 +16,11 @@ rootView : Model -> Html Msg
 rootView model =
   let
     loginForm =
-      LoginView.view model.login
+      LoginView.view model.login |> Html.map Login
 
-    loginFormWithMsg =
-      Html.map Login loginForm
   in
     fluidContainer
         [ class "elm-app"
         ]
-        [ stylesheet, fontAwesome, loginFormWithMsg
+        [ stylesheet, fontAwesome, loginForm
         ]

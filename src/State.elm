@@ -25,6 +25,7 @@ update msg model =
       let
         ( newLogin, cmd ) =
           LoginState.update loginMsg model.login
-
+        newCmd =
+          Cmd.map Login cmd
       in
-        ({ model | login = newLogin }, Cmd.map Login cmd )
+        ({ model | login = newLogin }, newCmd )
