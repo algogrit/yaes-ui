@@ -14,8 +14,12 @@ import Login.View as LoginView
 
 rootView : Model -> Html Msg
 rootView model =
+  let
+    loginForm =
+      LoginView.view model.login
+  in
     fluidContainer
         [ class "elm-app"
         ]
-        [ stylesheet, fontAwesome, LoginView.view model.login
+        [ stylesheet, fontAwesome, loginForm
         ]
