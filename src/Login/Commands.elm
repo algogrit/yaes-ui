@@ -1,10 +1,10 @@
-module Login.Rest exposing (..)
+module Login.Commands exposing (..)
 
 import Http
 import Json.Decode as Decode
 import Json.Encode as Encode
 
-import Rest exposing (baseURL)
+import Commands exposing (baseURL)
 
 import Login.Types exposing (..)
 

@@ -1,6 +1,6 @@
 module Login.State exposing (..)
 
-import Login.Rest exposing (postLogin)
+import Login.Commands exposing (postLogin)
 import Login.Types exposing (..)
 
 credentials : Credentials
